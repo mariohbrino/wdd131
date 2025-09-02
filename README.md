@@ -11,3 +11,4 @@ Define the host and port, along with the location folder that you want to serve 
 ```bash
 php -S localhost:8000 -t week01
 ```
+> Then, access the page [localhost:8000/basic-layout.html](http://localhost:8000/basic-layout.html)
