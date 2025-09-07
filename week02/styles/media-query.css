@@ -1,0 +1,74 @@
+:root {
+    --primary-color: #98ce05;
+    --secondary-color: #3f3f3f;
+    --accent1-color: #ffffff;
+    --accent2-color: #fdfdfd;
+    --accent3-color: #6972ee;
+    --heading-font: "Roboto", sans-serif;
+    --body-font: "Roboto", sans-serif;
+    --screen-size: 640px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    width: 100vw;
+    height: calc(100vh - 2rem);
+    place-items: center;
+    margin: 1rem 0;
+    color: var(--secondary-color);
+    background-color: var(--accent1-color);
+    font-family: var(--body-font);
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    grid-template-rows: auto 1fr auto; /* Adjust row heights */
+    grid-template-columns: 3fr 2fr 1fr; /* Adjust column widths */
+}
+
+h1 {
+    font-family: var(--heading-font);
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    max-width: var(--screen-size);
+    border: 1px solid var(--secondary-color);
+}
+
+header {
+    grid-area: header;
+    color: var(--secondary-color);
+    background-color: var(--accent3-color);
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: var(--screen-size);
+    background-color: var(--accent3-color);
+    border: 1px solid var(--secondary-color);
+}
+
+footer {
+    grid-area: footer;
+    color: var(--secondary-color);
+    background-color: var(--accent3-color);
+}
+
+section {
+    padding: 1rem;
+    background-color: var(--accent2-color);
+}
