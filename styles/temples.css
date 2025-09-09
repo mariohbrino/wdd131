@@ -27,6 +27,7 @@ main {
 
 h1 {
     font-size: 2rem;
+    font-size: larger;
 }
 
 nav {
@@ -65,7 +66,7 @@ nav ul {
 
 nav a {
     display: block;
-    color: #fff;
+    color: #000;
     text-align: center;
     padding: 1rem 3rem;
     text-decoration: none;
