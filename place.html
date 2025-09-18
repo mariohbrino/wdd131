@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country - WDD 131</title>
+    <meta name="description" content="W03 Project - Country Page - Mario Brino">
+    <meta name="author" content="Mario Brino">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Brazil</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1280px)" srcset="images/macaws-birds-large.webp">
+                <source media="(min-width: 768px)" srcset="images/macaws-birds-medium.webp">
+                <img src="images/macaws-birds-small.webp" width="341" height="255" alt="Macaws Birds">
+            </picture>
+            <div class="content">
+                <section>
+                    <div>
+                        <h2>Data</h2>
+                        <ul>
+                            <li>
+                                <span class="data-field">Area:</span>
+                                <span class="data-value">3.286 million mi²</span>
+                            </li>
+                            <li>
+                                <span class="data-field">Population:</span>
+                                <span class="data-value">212 million</span>
+                            </li>
+                            <li>
+                                <span class="data-field">Capital:</span>
+                                <span class="data-value">Brazilia</span>
+                            </li>
+                            <li>
+                                <span class="data-field">Language:</span>
+                                <span class="data-value">Portuguese</span>
+                            </li>
+                            <li>
+                                <span class="data-field">Currency:</span>
+                                <span class="data-value">Real</span>
+                            </li>
+                            <li>
+                                <span class="data-field">Time Zone:</span>
+                                <span class="data-value">GMT-3</span>
+                            </li>
+                            <li>
+                                <span class="data-field">Calling Code:</span>
+                                <span class="data-value">+55</span>
+                            </li>
+                            <li>
+                                <span class="data-field">Internet TLD:</span>
+                                <span class="data-value">.br</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <h2>Weather</h2>
+                        <ul>
+                            <li>
+                                <span class="data-field">Temperature:</span>
+                                <span class="data-value" id="temperature">17°C</span>
+                            </li>
+                            <li>
+                                <span class="data-field">Conditions:</span>
+                                <span class="data-value">Rainfall</span>
+                            </li>
+                            <li>
+                                <span class="data-field">Wind:</span>
+                                <span class="data-value" id="windSpeed">3.5km/h</span>
+                            </li>
+                            <li>
+                                <span class="data-field">Wind Chill:</span>
+                                <span class="data-value" id="windChill"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="description">
+            <h2>Description</h2>
+            <p>Brazil, the largest country in South America, is a vibrant land of immense biodiversity and cultural fusion. Dominated by the vast Amazon rainforest in the north, it is home to thousands of unique species and the world's largest wetlands, the Pantanal. Its expansive Atlantic coastline features long stretches of beautiful beaches and major port cities, including the iconic Rio de Janeiro and the economic powerhouse São Paulo.</p>
+            <p>As a former Portuguese colony, Brazil's culture is a unique blend of Indigenous, African, and European influences. The result is a rich heritage of food, music like the samba and bossa nova, and vibrant festivals, most notably the world-famous Carnival. Portuguese is the official language, making it distinct among its Spanish-speaking neighbors.</p>
+            <p>The country is an economic giant with a highly diversified economy based on agriculture, mining, and manufacturing. Despite its considerable wealth, Brazil continues to grapple with significant social inequalities. Yet, its natural beauty, lively spirit, and diverse populace make it one of the most compelling nations in the world.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> - Mario Brino - Brazil</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
