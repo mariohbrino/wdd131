@@ -12,3 +12,9 @@ Define the host and port, along with the location folder that you want to serve 
 php -S localhost:8000 -t week01
 ```
 > Then, access the page [localhost:8000/basic-layout.html](http://localhost:8000/basic-layout.html)
+
+Install Pillow and convert:
+```bash
+pip install pillow
+python convert_image.py
+```
