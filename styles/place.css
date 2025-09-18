@@ -9,7 +9,7 @@
     --primary-color: #293111;
     --secondary-color: #2c2c2c;
     --accent1-color: #ffffff;
-    --accent2-color: #c3c3c3;
+    --accent2-color: #007BFF;
     --accent3-color: #000000;
     --heading-font: "Roboto", sans-serif;
     --body-font: "Roboto", sans-serif;
@@ -37,6 +37,16 @@ header {
     background: var(--accent3-color);
     justify-content: center;
     align-items: center;
+}
+
+header h1::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 4px;
+    background-color: var(--accent2-color);
+    margin: 8px auto 0;
+    border-radius: 2px;
 }
 
 main {
@@ -127,6 +137,10 @@ footer {
     align-items: stretch;
 }
 
+/* .weatherIcon {
+    display: none;
+} */
+
 .data-field {
     font-weight: 700;
     align-self: stretch;
@@ -167,6 +181,9 @@ footer {
     }
 
     .content h2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         margin-left: -2rem;
         padding: 1rem 2rem;
         border-top-left-radius: 0.3rem;
@@ -217,6 +234,13 @@ footer {
         align-items: stretch;
     }
 
+    .weatherIcon {
+        display: block;
+        width: 24px;
+        height: 24px;
+        color: var(--accent1-color);
+    }
+
     .data-field {
         font-weight: 700;
         align-self: stretch;
@@ -250,6 +274,8 @@ footer {
     }
     
     .content h2 {
+        display: flex;
+        flex-direction: row;
         margin-left: -2rem;
         padding: 1rem 2rem;
         border-top-left-radius: 0.3rem;
