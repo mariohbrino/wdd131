@@ -1,7 +1,7 @@
 from PIL import Image
 
 
-def resize_with_scale(
+def convert_image(
     input_path: str,
     output_path: str,
     scale_factor: float = 0.5,
@@ -34,7 +34,7 @@ if __name__ == "__main__":
     resizes = [0.3333, 0.6666, 1.0]
 
     for size, scale in zip(sizes, resizes):
-        resize_with_scale(
+        convert_image(
             input_path="albuquerque-temple-lds-original.jpg",
             output_path=f"week03/images/albuquerque-temple-lds-{size}.webp",
             scale_factor=scale,
