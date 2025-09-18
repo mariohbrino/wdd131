@@ -137,9 +137,9 @@ footer {
     align-items: stretch;
 }
 
-/* .weatherIcon {
+.weatherIcon {
     display: none;
-} */
+}
 
 .data-field {
     font-weight: 700;
