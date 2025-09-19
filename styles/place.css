@@ -99,7 +99,7 @@ footer {
 
 .content section {
     width: 100%;
-    padding: 2rem 3rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     background-color: var(--accent1-color);
