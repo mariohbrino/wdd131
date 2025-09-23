@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    margin: 1rem auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 1rem 0;
+    height: 600px;
+}
+
+li img {
+    background-color: black;
+    animation-name: black;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    text-align: center;
+}
