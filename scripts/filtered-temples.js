@@ -104,7 +104,6 @@ const filteredTemples = (menu) => {
 
 navLinks.addEventListener('click', (event) => {
     event.preventDefault();
-    mainTemple.innerHTML = "";
     const menu = event.target.innerHTML
     const filtered = filteredTemples(menu);
     templeCards(filtered, menu);
@@ -113,6 +112,7 @@ navLinks.addEventListener('click', (event) => {
 const templeCards = (temples, title = "Home") => {
     const templesList = document.createElement("div");
     const h1 = document.createElement("h1");
+    mainTemple.innerHTML = "";
     h1.innerHTML = `Temple - ${title}`;
     templesList.classList.add("temples-list");
     mainTemple.appendChild(h1);
@@ -121,13 +121,13 @@ const templeCards = (temples, title = "Home") => {
         const card = document.createElement("section");
         const cardHeader = document.createElement("div");
         const cardImage = document.createElement("div");
-        const h3 = document.createElement("h3");
+        const h2 = document.createElement("h2");
         const location = document.createElement("p");
         const dedicated = document.createElement("p");
         const area = document.createElement("p");
         const image = document.createElement("img");
 
-        h3.innerHTML = temple.templeName;
+        h2.innerHTML = temple.templeName;
         location.innerHTML = `<span class="label">Location</span>: ${temple.location}`;
         dedicated.innerHTML = `<span class="label">Dedicated</span>: ${temple.dedicated}`;
         area.innerHTML = `<span class="label">Size</span>: ${temple.area.toLocaleString()} sq ft`;
@@ -140,7 +140,7 @@ const templeCards = (temples, title = "Home") => {
         cardHeader.classList.add("temple-header");
         cardImage.classList.add("temple-image");
 
-        cardHeader.appendChild(h3);
+        cardHeader.appendChild(h2);
         cardHeader.appendChild(location);
         cardHeader.appendChild(dedicated);
         cardHeader.appendChild(area);
