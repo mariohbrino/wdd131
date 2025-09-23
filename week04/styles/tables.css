@@ -1,0 +1,77 @@
+:root {
+    --primary-color: #98ce05;
+    --secondary-color: #2c2c2c;
+    --accent1-color: #ffffff;
+    --accent2-color: #c3c3c3;
+    --accent3-color: #000000;
+    --body-font: "Roboto", sans-serif;
+    --heading-font: "Roboto", sans-serif;
+    --screen-medium: 768px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+main {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    min-width: auto;
+}
+
+table {
+    margin: 1rem auto;
+    border: thin solid var(--secondary-color);
+    border-collapse: collapse;
+}
+
+thead {
+    color: var(--accent1-color);
+    background-color: var(--secondary-color);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(235, 235, 235, 0.5);
+}
+
+thead tr:not(:first-child) th:not(:first-child) {
+    font-weight: 700;
+    font-size: 1.4rem;
+    background-color: var(--primary-color);
+}
+
+th, td {
+    padding: 1rem 2rem;
+    border: 1px solid var(--secondary-color);
+}
+
+td {
+    text-align: center;
+}
+
+td:first-child {
+    font-weight: 500;
+}
+
+caption {
+  padding: 10px;
+  caption-side: bottom;
+    color: var(--accent3-color);
+    font-size: .85rem;
+}
