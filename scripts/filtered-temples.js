@@ -113,7 +113,7 @@ navLinks.addEventListener('click', (event) => {
 const templeCards = (temples, title = "Home") => {
     const templesList = document.createElement("div");
     const h1 = document.createElement("h1");
-    h1.innerHTML = title;
+    h1.innerHTML = `Temple - ${title}`;
     templesList.classList.add("temples-list");
     mainTemple.appendChild(h1);
     mainTemple.appendChild(templesList);
