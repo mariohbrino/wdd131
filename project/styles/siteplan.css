@@ -40,6 +40,8 @@ h2 {
 }
 
 h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
     font-weight: 500;
 }
 
@@ -100,46 +102,56 @@ section {
 }
 
 .background-colors {
-    background-color: #f5f5f5;
     padding: 1rem;
     border-radius: 1rem;
     width: 12px;
     height: 12px;
+    background-color: #f5f5f5;
+    border: 1px solid #dbdbdb;
+    box-shadow: 1px 3px 5px rgba(54, 54, 54, 0.3);
 }
 
 .headings {
-    background-color: #363636;
     padding: 1rem;
     border-radius: 1rem;
     width: 12px;
     height: 12px;
+    background-color: #363636;
+    border: 1px solid #dbdbdb;
+    box-shadow: 1px 3px 5px rgba(54, 54, 54, 0.3);
 }
 
 .paragraphs {
-    background-color: #626267;
     padding: 1rem;
     border-radius: 1rem;
     width: 12px;
     height: 12px;
+    background-color: #626267;
+    border: 1px solid #dbdbdb;
+    box-shadow: 1px 3px 5px rgba(54, 54, 54, 0.3);
 }
 
 .accents-1 {
-    background-color: #e2de84;
     padding: 1rem;
     border-radius: 1rem;
     width: 12px;
     height: 12px;
+    background-color: #e2de84;
+    border: 1px solid #dbdbdb;
+    box-shadow: 1px 3px 5px rgba(54, 54, 54, 0.3);
 }
 
 .accents-2 {
-    background-color: #717147;
     padding: 1rem;
     border-radius: 1rem;
     width: 12px;
     height: 12px;
+    background-color: #717147;
+    border: 1px solid #dbdbdb;
+    box-shadow: 1px 3px 5px rgba(54, 54, 54, 0.3);
 }
 
-.wireframe {
+.wireframe-desktop {
     border-radius: 1rem;
     border: 1px solid #dbdbdb;
     display: grid;
@@ -153,7 +165,7 @@ section {
     grid-template-columns: 2fr 2fr 1fr;
 }
 
-.wireframe header {
+.wireframe-desktop .header {
     padding: 1rem;
     grid-column: 1 / 4;
     color: #dbdbdb;
@@ -162,23 +174,61 @@ section {
     border-top-right-radius: 1rem;
 }
 
-.wireframe main {
+.wireframe-desktop .main {
     padding: 1rem;
     grid-column: 1 / 3;
     color: #626267;
     background-color: #f5f5f5;
 }
 
-.wireframe aside {
+.wireframe-desktop .aside {
     padding: 1rem;
     grid-column: 3 / 4;
     background-color: #dbdbdb;
 }
 
-.wireframe footer {
+.wireframe-desktop .footer {
     padding: 1rem;
     text-align: center;
     grid-column: 1 / 4;
+    color: #dbdbdb;
+    background-color: #363636;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.wireframe-mobile {
+    max-width: 480px;
+    display: grid;
+    height: 100%;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+    grid-template-rows: auto 2fr 1fr auto;
+    grid-template-columns: 1fr;
+    border-radius: 1rem;
+    border: 1px solid #dbdbdb;
+}
+
+.wireframe-mobile .header {
+    padding: 1rem;
+    color: #dbdbdb;
+    background-color: #363636;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.wireframe-mobile .main {
+    padding: 1rem;
+    color: #626267;
+    background-color: #f5f5f5;
+}
+
+.wireframe-mobile .footer {
+    padding: 1rem;
+    text-align: center;
     color: #dbdbdb;
     background-color: #363636;
     border-bottom-left-radius: 1rem;
