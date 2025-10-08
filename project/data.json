@@ -1,0 +1,128 @@
+{
+  "teams": [
+    {
+      "id": 1,
+      "name": "Red Bull Racing",
+      "constructor": "Red Bull Racing Honda RBPT",
+      "country": "Austria",
+      "teamPrincipal": "Christian Horner",
+      "carIds": [1],
+      "driverIds": [1, 2]
+    },
+    {
+      "id": 2,
+      "name": "Ferrari",
+      "constructor": "Scuderia Ferrari",
+      "country": "Italy",
+      "teamPrincipal": "Frédéric Vasseur",
+      "carIds": [2],
+      "driverIds": [3, 4]
+    },
+    {
+      "id": 3,
+      "name": "McLaren",
+      "constructor": "McLaren Mercedes",
+      "country": "United Kingdom",
+      "teamPrincipal": "Andrea Stella",
+      "carIds": [3],
+      "driverIds": [5, 6]
+    },
+    {
+      "id": 4,
+      "name": "Mercedes",
+      "constructor": "Mercedes-AMG Petronas F1 Team",
+      "country": "Germany",
+      "teamPrincipal": "Toto Wolff",
+      "carIds": [4],
+      "driverIds": [7, 8]
+    },
+    {
+      "id": 5,
+      "name": "Aston Martin",
+      "constructor": "Aston Martin Aramco Mercedes",
+      "country": "United Kingdom",
+      "teamPrincipal": "Mike Krack",
+      "carIds": [5],
+      "driverIds": [9, 10]
+    },
+    {
+      "id": 6,
+      "name": "Alpine",
+      "constructor": "BWT Alpine F1 Team",
+      "country": "France",
+      "teamPrincipal": "Bruno Famin",
+      "carIds": [6],
+      "driverIds": [11, 12]
+    },
+    {
+      "id": 7,
+      "name": "Williams",
+      "constructor": "Williams Mercedes",
+      "country": "United Kingdom",
+      "teamPrincipal": "James Vowles",
+      "carIds": [7],
+      "driverIds": [13, 14]
+    },
+    {
+      "id": 8,
+      "name": "RB",
+      "constructor": "Visa Cash App RB Formula One Team",
+      "country": "Italy",
+      "teamPrincipal": "Laurent Mekies",
+      "carIds": [8],
+      "driverIds": [15, 16]
+    },
+    {
+      "id": 9,
+      "name": "Haas",
+      "constructor": "MoneyGram Haas F1 Team",
+      "country": "United States",
+      "teamPrincipal": "Ayao Komatsu",
+      "carIds": [9],
+      "driverIds": [17, 18]
+    },
+    {
+      "id": 10,
+      "name": "Kick Sauber",
+      "constructor": "Stake F1 Team Kick Sauber",
+      "country": "Switzerland",
+      "teamPrincipal": "Alessandro Alunni Bravi",
+      "carIds": [10],
+      "driverIds": [19, 20]
+    }
+  ],
+  "drivers": [
+    { "id": 1, "name": "Max Verstappen", "number": 1, "nationality": "Dutch", "teamId": 1 },
+    { "id": 2, "name": "Sergio Pérez", "number": 11, "nationality": "Mexican", "teamId": 1 },
+    { "id": 3, "name": "Charles Leclerc", "number": 16, "nationality": "Monégasque", "teamId": 2 },
+    { "id": 4, "name": "Carlos Sainz Jr.", "number": 55, "nationality": "Spanish", "teamId": 2 },
+    { "id": 5, "name": "Lando Norris", "number": 4, "nationality": "British", "teamId": 3 },
+    { "id": 6, "name": "Oscar Piastri", "number": 81, "nationality": "Australian", "teamId": 3 },
+    { "id": 7, "name": "Lewis Hamilton", "number": 44, "nationality": "British", "teamId": 4 },
+    { "id": 8, "name": "George Russell", "number": 63, "nationality": "British", "teamId": 4 },
+    { "id": 9, "name": "Fernando Alonso", "number": 14, "nationality": "Spanish", "teamId": 5 },
+    { "id": 10, "name": "Lance Stroll", "number": 18, "nationality": "Canadian", "teamId": 5 },
+    { "id": 11, "name": "Pierre Gasly", "number": 10, "nationality": "French", "teamId": 6 },
+    { "id": 12, "name": "Esteban Ocon", "number": 31, "nationality": "French", "teamId": 6 },
+    { "id": 13, "name": "Alex Albon", "number": 23, "nationality": "Thai", "teamId": 7 },
+    { "id": 14, "name": "Logan Sargeant", "number": 2, "nationality": "American", "teamId": 7 },
+    { "id": 15, "name": "Daniel Ricciardo", "number": 3, "nationality": "Australian", "teamId": 8 },
+    { "id": 16, "name": "Yuki Tsunoda", "number": 22, "nationality": "Japanese", "teamId": 8 },
+    { "id": 17, "name": "Nico Hülkenberg", "number": 27, "nationality": "German", "teamId": 9 },
+    { "id": 18, "name": "Kevin Magnussen", "number": 20, "nationality": "Danish", "teamId": 9 },
+    { "id": 19, "name": "Valtteri Bottas", "number": 77, "nationality": "Finnish", "teamId": 10 },
+    { "id": 20, "name": "Zhou Guanyu", "number": 24, "nationality": "Chinese", "teamId": 10 }
+  ],
+  "cars": [
+    { "id": 1, "model": "RB20", "engine": "Honda RBPT", "teamId": 1 },
+    { "id": 2, "model": "SF-24", "engine": "Ferrari", "teamId": 2 },
+    { "id": 3, "model": "MCL38", "engine": "Mercedes", "teamId": 3 },
+    { "id": 4, "model": "W15", "engine": "Mercedes", "teamId": 4 },
+    { "id": 5, "model": "AMR24", "engine": "Mercedes", "teamId": 5 },
+    { "id": 6, "model": "A524", "engine": "Renault", "teamId": 6 },
+    { "id": 7, "model": "FW46", "engine": "Mercedes", "teamId": 7 },
+    { "id": 8, "model": "VCARB 01", "engine": "Honda RBPT", "teamId": 8 },
+    { "id": 9, "model": "VF-24", "engine": "Ferrari", "teamId": 9 },
+    { "id": 10, "model": "C44", "engine": "Ferrari", "teamId": 10 }
+  ]
+}
