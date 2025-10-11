@@ -74,7 +74,7 @@ const UpdateSeason = (cars) => {
 };
 
 const fetchData = () => {
-  fetch("/project/data.json")
+  fetch("data.json")
     .then(response => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -97,7 +97,6 @@ const fetchData = () => {
         return car;
       });
 
-      console.log(cars);
       UpdateSeason(cars);
     })
     .catch(error => {

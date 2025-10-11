@@ -1,23 +1,23 @@
 const menuLinks = [
     {
         "name": "Home",
-        "url": "/project/index.html"
+        "url": "index.html"
     },
     {
         "name": "Teams",
-        "url": "/project/teams.html"
+        "url": "teams.html"
     },
     {
         "name": "Drivers",
-        "url": "/project/drivers.html"
+        "url": "drivers.html"
     },
     {
         "name": "Cars",
-        "url": "/project/cars.html"
+        "url": "cars.html"
     },
     {
         "name": "Site Plan",
-        "url": "/project/siteplan.html"
+        "url": "siteplan.html"
     },
 ];
 
