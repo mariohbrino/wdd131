@@ -79,7 +79,7 @@ const updateTable = (headerId, bodyId, arrayList, keys = [], orderBy = []) => {
 // });
 
 const fetchData = () => {
-  fetch("data.json")
+  fetch("/project/data.json")
     .then(response => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);

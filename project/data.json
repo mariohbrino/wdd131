@@ -114,15 +114,15 @@
     { "id": 20, "name": "Zhou Guanyu", "number": 24, "nationality": "Chinese", "teamId": 10 }
   ],
   "cars": [
-    { "id": 1, "model": "RB20", "engine": "Honda RBPT", "teamId": 1 },
-    { "id": 2, "model": "SF-24", "engine": "Ferrari", "teamId": 2 },
-    { "id": 3, "model": "MCL38", "engine": "Mercedes", "teamId": 3 },
-    { "id": 4, "model": "W15", "engine": "Mercedes", "teamId": 4 },
-    { "id": 5, "model": "AMR24", "engine": "Mercedes", "teamId": 5 },
-    { "id": 6, "model": "A524", "engine": "Renault", "teamId": 6 },
-    { "id": 7, "model": "FW46", "engine": "Mercedes", "teamId": 7 },
-    { "id": 8, "model": "VCARB 01", "engine": "Honda RBPT", "teamId": 8 },
-    { "id": 9, "model": "VF-24", "engine": "Ferrari", "teamId": 9 },
-    { "id": 10, "model": "C44", "engine": "Ferrari", "teamId": 10 }
+    { "id": 1, "model": "RB20", "engine": "Honda RBPT", "image": "/project/images/red-bull.webp", "teamId": 1 },
+    { "id": 2, "model": "SF-24", "engine": "Ferrari", "image": "/project/images/ferrari.webp", "teamId": 2 },
+    { "id": 3, "model": "MCL38", "engine": "Mercedes", "image": "/project/images/mclaren.webp", "teamId": 3 },
+    { "id": 4, "model": "W15", "engine": "Mercedes", "image": "/project/images/mercedes.webp", "teamId": 4 },
+    { "id": 5, "model": "AMR24", "engine": "Mercedes", "image": "/project/images/aston-martin.webp", "teamId": 5 },
+    { "id": 6, "model": "A524", "engine": "Renault", "image": "/project/images/alpine.webp", "teamId": 6 },
+    { "id": 7, "model": "FW46", "engine": "Mercedes", "image": "/project/images/williams.webp", "teamId": 7 },
+    { "id": 8, "model": "VCARB 01", "engine": "Honda RBPT", "image": "/project/images/racing-bulls.webp", "teamId": 8 },
+    { "id": 9, "model": "VF-24", "engine": "Ferrari", "image": "/project/images/haas.webp", "teamId": 9 },
+    { "id": 10, "model": "C44", "engine": "Ferrari", "image": "/project/images/sauber.webp", "teamId": 10 }
   ]
 }

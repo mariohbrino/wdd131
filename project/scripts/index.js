@@ -2,84 +2,79 @@ const getTeamDrivers = (arrayList, teamId) => {
   return arrayList.drivers.filter(driver => driver.teamId === teamId);
 };
 
-const getTeamCar = (arrayList, teamId) => {
-  return arrayList.cars.find(car => car.teamId === teamId);
-};
+const UpdateSeason = (cars) => {
+  const seasonElement = document.querySelector("#season-list");
+  const ulElement = document.createElement("ul");
+  cars.forEach(car => {
+    const card = document.createElement("li");
+    const cardHeader = document.createElement("div");
+    const headerDescription = document.createElement("div");
+    const cardImage = document.createElement("div");
+    const h3 = document.createElement("h3");
+    const carDetails = document.createElement("div");
+    const model = document.createElement("p");
+    const engine = document.createElement("p");
+    const driverDetails = document.createElement("div");
+    const image = document.createElement("img");
 
-const getDriverTeam = (arrayList, driverId) => {
-  const driver = arrayList.drivers.find(d => d.id === driverId);
-  return arrayList.teams.find(team => team.id === driver.teamId);
-};
+    card.classList.add("season-item");
+    cardHeader.classList.add("season-header");
+    headerDescription.classList.add("header-description");
+    cardImage.classList.add("season-image");
+    carDetails.classList.add("car-details");
+    driverDetails.classList.add("drivers-details");
 
-const filterData = (originalData, searchTerm) => {
-  const lowerCaseSearchTerm = searchTerm.toLowerCase();
-  return originalData.filter(item =>
-    item.name.toLowerCase().includes(lowerCaseSearchTerm) ||
-    item.city.toLowerCase().includes(lowerCaseSearchTerm)
-  );
-};
+    h3.innerHTML = car.team_name;
+    model.innerHTML = `<span class="label">Model</span>: ${car.model}`;
+    engine.innerHTML = `<span class="label">Engine</span>: ${car.engine}`;
 
-const updateTable = (headerId, bodyId, arrayList, keys = [], orderBy = []) => {
-  const tableHeader = document.getElementById(headerId);
-  const tableBody = document.getElementById(bodyId);
-  
-  tableHeader.innerHTML = ""; // Clear existing headers
-  tableBody.innerHTML = ""; // Clear existing content
+    // Set the normal image src
+    image.setAttribute("src", car.image);
 
-  if (arrayList.length === 0) return;
+    // Generate the large image path by inserting '-large' before the extension
+    const imageParts = car.image.split('.');
+    if (imageParts.length > 1) {
+      const ext = imageParts.pop();
+      const largeImage = `${imageParts.join('.')}-large.${ext}`;
+      image.setAttribute("srcset", `${car.image} 480w, ${largeImage} 1024w`);
+      image.setAttribute("sizes", "(max-width: 600px) 720px, 1024px");
+    }
+    image.setAttribute("alt", `${car.name} of ${car.team_name}`);
+    image.setAttribute("loading", "lazy");
 
-  // If keys not provided, use keys from the first item
-  const displayKeys = keys.length > 0 ? keys : Object.keys(arrayList[0]);
+    car.drivers.forEach(driver => {
+      const driverInfo = document.createElement("div");
+      const driverName = document.createElement("p");
+      const driverNationality = document.createElement("p");
 
-  // Sort arrayList by orderBy fields if provided
-  if (orderBy.length > 0) {
-    arrayList = [...arrayList].sort((a, b) => {
-      for (let field of orderBy) {
-        if (a[field] < b[field]) return -1;
-        if (a[field] > b[field]) return 1;
-      }
-      return 0;
+      driverInfo.classList.add("drivers-info");
+
+      driverName.innerHTML = driver.name;
+      driverNationality.innerHTML = `Nationality: ${driver.nationality}`;
+      driverInfo.appendChild(driverName);
+      driverInfo.appendChild(driverNationality);
+      driverDetails.appendChild(driverInfo);
     });
-  }
 
-  // Build table headers dynamically
-  const headerRow = tableHeader.insertRow();
-  displayKeys.forEach(key => {
-    const th = document.createElement("th");
-    // Convert camelCase or snake_case to Title Case
-    const title = key
-      .replace(/([A-Z])/g, " $1")         // camelCase: add space before capitals
-      .replace(/_/g, " ")                 // snake_case: replace underscores with spaces
-      .replace(/\s+/g, " ")               // collapse multiple spaces
-      .trim()
-      .replace(/\b\w/g, c => c.toUpperCase()); // capitalize first letter of each word
-    th.textContent = title;
-    headerRow.appendChild(th);
-  });
+    carDetails.appendChild(model);
+    carDetails.appendChild(engine);
 
-  // Build table body rows
-  arrayList.forEach(item => {
-    const row = tableBody.insertRow();
-    row.setAttribute("data-id", item.id);
-    displayKeys.forEach(key => {
-      const cell = row.insertCell();
-      cell.textContent = item[key];
-    });
+    cardHeader.appendChild(h3);
+    headerDescription.appendChild(carDetails);
+    headerDescription.appendChild(driverDetails);
+    cardHeader.appendChild(headerDescription);
+
+    cardImage.appendChild(image);
+
+    card.appendChild(cardHeader);
+    card.appendChild(cardImage);
+    ulElement.appendChild(card);
+    seasonElement.appendChild(ulElement);
   });
 };
-
-// document.getElementById("searchForm").addEventListener("submit", (event) => {
-//   event.preventDefault();
-// });
-
-// document.getElementById("searchInput").addEventListener("input", (event) => {
-//   const searchTerm = event.target.value;
-//   const filteredResults = filterData(searchTerm);
-//   updateTable(filteredResults);
-// });
 
 const fetchData = () => {
-  fetch("data.json")
+  fetch("/project/data.json")
     .then(response => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -88,19 +83,22 @@ const fetchData = () => {
     })
     .then(data => {
       const teams = data.teams;
+      const drivers = data.drivers;
       const cars = data.cars.map(car => {
         const team = teams.find(team => team.id === car.teamId);
         car.team_name = team ? team.name : "Unknown";
+        const driverItems = [];
+        drivers.forEach(driver => {
+          if (car.teamId === driver.teamId) {
+            driverItems.push(driver);
+          }
+        });
+        car.drivers = driverItems;
         return car;
       });
 
-      updateTable(
-        headerId="carsTableHeader",
-        bodyId="carsTableBody",
-        arrayList=cars,
-        keys=["team_name", "model", "engine"],
-        orderBy=["team"]
-      );
+      console.log(cars);
+      UpdateSeason(cars);
     })
     .catch(error => {
       console.error('Error fetching or parsing JSON:', error);

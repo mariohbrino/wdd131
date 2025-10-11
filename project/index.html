@@ -10,44 +10,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/racing.css">
-    <script src="scripts/index.js" defer></script>
-    <script src="scripts/footer.js" defer></script>
+    <link rel="stylesheet" href="/project/styles/racing.css">
+    <script src="/project/scripts/index.js" defer></script>
+    <script src="/project/scripts/navigation.js" defer></script>
+    <script src="/project/scripts/footer.js" defer></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/index.html">Home</a>
-                </li>
-                <li>
-                    <a href="/teams.html">Teams</a>
-                </li>
-                <li>
-                    <a href="/drivers.html">Drivers</a>
-                </li>
-                <li>
-                    <a href="/cars.html">Cars</a>
-                </li>
-            </ul>
-        </nav>
+        <nav id="navigation"></nav>
     </header>
     <main>
         <h1>Formula 1 Racing</h1>
-        <section>
-            <h2>Cars</h2>
-            <table>
-                <thead id="carsTableHeader"></thead>
-                <tbody id="carsTableBody">
-                    <tr>
-                        <td colspan="100%">No record listed.</td>
-                    </tr>
-                </tbody>
-                <tfoot></tfoot>
-            </table>
-        </section>
+        <p>
+            The 2024 Formula 1 season promises thrilling races, fierce competition, and cutting-edge technology as top teams and drivers battle for the championship. With new regulations, exciting circuits, and talented rookies joining the grid, fans can expect unforgettable moments and high-speed action throughout the year.
+        </p>
+        <div>
+            <h2>Season 2024</h2>
+            <div id="season-list"></div>
+        </div>
     </main>
+    <aside id="links"></aside>
     <footer>
         <p>&copy; <span id="currentYear"></span> - Formula 1 Racing</p>
         <p>Last Modification: <span id="lastModified"></span></p>
